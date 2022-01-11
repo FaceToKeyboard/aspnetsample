@@ -2,7 +2,7 @@
 
 I'm following along with the '[ASP.NET 101](https://www.youtube.com/playlist?list=PLdo4fOcmZ0oW8nviYduHq7bmKode-p8Wy)' video series from Microsoft.
 
-This is my first ever project with C#, and my launching point into finding something analogous the Javascript and MERN stack development I've learned so far.
+This is my first ever project with C#, and I'm hoping ASP.NET, Blazor, and Razor are analogous enough to the Javascript and MERN stack development I've learned so far to allow me to pick up on it quickly.
 
 ## My Thoughts So Far
 
