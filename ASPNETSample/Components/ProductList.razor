@@ -64,7 +64,7 @@
                     @for (int i = 0; i < 5; i++)
                     {
                         int currentStar = i;
-                        if (i <= currentRating)
+                        if (i <= averagedRating)
                         {
                             <i class="fas fa-star checked" @onclick="(e => SubmitRating(currentStar))" ></i>
                         }
@@ -87,9 +87,10 @@
     {
         selectedProductId = productId;
         selectProduct = ProductService.GetProducts().First(x => x.Id == productId);
+        GetCurrentRating();
     }
 
-    int currentRating = 0;
+    double averagedRating = 0;
     int voteCount = 0;
     string? voteLabel;
 
@@ -97,22 +98,22 @@
     {
         if (selectProduct.Ratings == null)
         {
-            currentRating = 0;
+            averagedRating = 0;
             voteCount = 0;
         }
         else
         {
             voteCount = selectProduct.Ratings.Count();
             voteLabel = voteCount > 1 ? "Votes" : "Vote";
-            currentRating = selectProduct.Ratings.Sum() / voteCount;
+            averagedRating = selectProduct.Ratings.Average();
         }
 
-        System.Console.WriteLine($"Current rating for {selectProduct.Id}: {currentRating}");
+        System.Console.WriteLine($"Current rating for {selectProduct.Id}: {averagedRating}");
     }
 
     void SubmitRating(int rating)
     {
-        System.Console.WriteLine($"Rating reeived for {selectProduct.Id}: {rating}");
+        System.Console.WriteLine($"Rating received for {selectProduct.Id}: {rating}");
         ProductService.AddRating(selectedProductId, rating);
         SelectProduct(selectedProductId);
     }
