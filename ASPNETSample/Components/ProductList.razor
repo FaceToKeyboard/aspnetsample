@@ -66,11 +66,11 @@
                         int currentStar = i;
                         if (i <= currentRating)
                         {
-                            <span class="fa-star fa-star checked" @onclick="(e => SubmitRating(currentStar))" ></span>
+                            <i class="fas fa-star checked" @onclick="(e => SubmitRating(currentStar))" ></i>
                         }
                         else
                         {
-                            <span class="fa-star fa-star" @onclick="(e => SubmitRating(currentStar))" ></span>
+                            <i class="far fa-star" @onclick="(e => SubmitRating(currentStar))" ></i>
                         }
                     }
                 </div>
