@@ -6,7 +6,7 @@ This is my first ever project with C#, and I'm hoping ASP.NET, Blazor, and Razor
 
 ![Webpage screenshot](ASPNetSample.jpg)
 
-## My Thoughts So Far
+## My Thoughts
 
 ### Through video 10
 
